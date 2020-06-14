@@ -70,6 +70,7 @@ h2 {
 }
 .form-control input:focus + label {
   top: -25px;
+  left: 0px;
   opacity: 1;
 }
 
