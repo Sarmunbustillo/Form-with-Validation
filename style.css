@@ -39,7 +39,7 @@ h2 {
 }
 
 .form-control {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
 }
@@ -53,6 +53,11 @@ h2 {
   left: 9px;
   transition: all 0.3s cubic-bezier(0.04, 1.15, 1, 1);
   opacity: 0;
+}
+.form-control label.slideup {
+  top: -25px;
+  left: 0px;
+  opacity: 1;
 }
 
 .form-control input {
