@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --light-grey: #f9fafb;
+  --grey: #777;
+  --white: #fff;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --light-blue: #3498db;
+}
+
+body {
+  background-color: var(--light-grey);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 35px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.form-control {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: var(--grey);
+  display: block;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  transition: all 0.3s cubic-bezier(0.04, 1.15, 1, 1);
+  opacity: 0;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: var(--light-blue);
+}
+.form-control input:focus + label {
+  top: -25px;
+  opacity: 1;
+}
+
+.form-control input:focus::placeholder {
+  color: transparent;
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: var(--light-blue);
+  border: 2px solid var(--light-blue);
+  border-radius: 4px;
+  color: var(--white);
+  display: block;
+  font-size: 16px;
+  padding: 12px 15px;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #064874;
+}
